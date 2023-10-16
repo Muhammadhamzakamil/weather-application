@@ -38,6 +38,9 @@ const Weather = () => {
             {/* button */}
             <Button variant="ghost" className="hover:bg-transparent text-white hover:text-gray-500 duration-300 " size="icon" 
             onClick={()=>{
+              if(search.length == 0){
+                return;
+              }
               setCity(search)
               setSearch("");
             }}
